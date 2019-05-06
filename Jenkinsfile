@@ -13,5 +13,5 @@ node{
  stage('Archive'){
   archiveArtifacts '/Users/bhaskarreddyl/.jenkins/workspace/Pipeline-Project-Ant-Web/dist/SampleAntProject.war'
  }
-}/*
+} /*
 
