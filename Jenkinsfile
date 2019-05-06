@@ -2,15 +2,7 @@
 #! groovy
 node{
  stage('Source'){
-     git 'https://github.com/memotechno/Ant_java_repo.git'
-   
-   if (env.BRANCH_NAME == 'master') {
-  stage 'Only on master'
-  println 'This happens only on master'
-} else {
-  stage 'Other branches'
-  println "Current branch ${env.BRANCH_NAME}"
-}
+     checkout scm
  }
  
  stage('Build'){
