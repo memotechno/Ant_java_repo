@@ -2,7 +2,7 @@
 #! groovy
 node{
  stage('Source'){
-     git 'https://github.com/devopstrainingblr/Ant-JavaProject.git'
+     git 'https://github.com/memotechno/Ant_java_repo.git'
    
    if (env.BRANCH_NAME == 'master') {
   stage 'Only on master'
@@ -15,13 +15,13 @@ node{
  
  stage('Build'){
     /* bat "ant -f build-mt.xml" */ /*For windows machines*/
-    sh "ant -f build-mt.xml" 
+    sh "ant" 
  }
- stage('Send Email'){
+ /* stage('Send Email'){
      mail bcc: 'mithunreddytechnologies@gmail.com', body: 'Buils is done', cc: '', from: '', replyTo: '', subject: 'Build Status', to: 'devopstrainingblr@gmail.com'
  }
  /*stage('Archive'){
   archiveArtifacts '/Users/bhaskarreddyl/.jenkins/workspace/Pipeline-Project-Ant-Web/dist/SampleAntProject.war'
  }*/
-}
+}/*
 
